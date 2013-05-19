@@ -4,19 +4,17 @@
 package main
 
 import (
-	"code.google.com/p/go.crypto/ssh/terminal"
 	"flag"
 	"fmt"
 	"io"
 	"os"
 	"strings"
-	"syscall"
 )
 
 func main() {
 	flag.Parse()
 
-	if terminal.IsTerminal(syscall.Stdin) {
+	if isTerminal() {
 		flag.Usage()
 		fmt.Println("\nPlease pipe the file you wish to encode into stdin\n")
 		return
