@@ -7,9 +7,9 @@ Having [set up your Go environment](http://golang.org/doc/install), simply run
 
     go get github.com/cratonica/2carray
 
-Then use by piping a file into the utility and capturing the output. You must provide a name for the generate array symbol. For example (bash):
+Then use by piping a file into the utility and capturing the output. You must provide a name for the generate array symbol. For example:
 
-    cat myimage.png | $GOPATH/bin/2carray my_image > my_image.h
+    $GOPATH/bin/2carray my_image < myimage.png > my_image.h
 
 This will output something like:
 
